@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Allo Shell</title>
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+    <!-- tag::logout[] -->
+    <div>
+        <h1>Hello, <span id="managername" th:text="${#authentication.name}">user</span>.</h1>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Log Out"/>
+        </form>
+    </div>
+    <br>
+    <!-- end::logout[] -->
+
+    <div id="react"></div>
+
+    <script src="built/bundle.js"></script>
+
+</body>
+</html>
